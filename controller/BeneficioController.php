@@ -19,7 +19,7 @@ class beneficioController{
             echo "<td>".$value['tipo_beneficio'] ."</td>";
             echo "<td>".$value['valor_beneficio'] ."</td>";
             echo "<td>".$value['data_vencimento_contrato']."</td>";
-            echo "<td><a class='btn btn-warning m-r-5' href='editar.php?id=".$value['id']."'>Editar</a><a class='btn btn-danger' href='../controller/BeneficioController.php?id=".$value['id']."'>Excluir</a></td>";
+            echo "<td><a class='btn btn-warning m-r-5' href='editar.php?id=".$value['id']."'>Editar</a><a class='btn btn-danger' href='../controller/BeneficioController.php?id=".$value['id']."&method=delete'>Excluir</a></td>";
             echo "</tr>";
         }
     }
@@ -106,7 +106,7 @@ if($_POST['method'] == 'add'){
 if($_POST['method'] == 'edit'){
     $beneficio->editarBeneficio($_POST);
 }
-if(isset($_GET['id'])){
+if(isset($_GET['method']) == 'delete'){
     $beneficio->deletarBeneficio($_GET['id']);
 }
 
