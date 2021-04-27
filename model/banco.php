@@ -9,10 +9,10 @@ class Banco{
 
     private function conexao()
     {
-        $servidor = 'asprev.ckbqvh6eiacv.sa-east-1.rds.amazonaws.com';
-        $usuario = "guilhermeO";
-        $senha = "39437063";
-        $dbname = "guilherme";
+        $servidor = 'localholt';
+        $usuario = "root";
+        $senha = "root";
+        $dbname = "teste";
 
         $this->mysqli = new mysqli($servidor, $usuario, $senha, $dbname);
     }
